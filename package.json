@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel ./lib --out-dir dist --extensions '.ts,.tsx' --source-maps",
+    "check-types": "tsc",
+    "dev": "babel ./lib --out-dir dist --extensions '.ts,.tsx' --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +14,14 @@
   ],
   "author": "Christoph Wurst",
   "license": "GPL-3.0-or-later",
-  "dependencies": {}
+  "dependencies": {
+    "core-js": "^3.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "typescript": "^3.5.2"
+  }
 }
