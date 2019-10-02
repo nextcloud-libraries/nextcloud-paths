@@ -1,5 +1,5 @@
 {
-  "name": "nextcloud-paths",
+  "name": "@nextcloud/paths",
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
@@ -15,15 +15,15 @@
   "author": "Christoph Wurst",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "core-js": "^3.1.4"
+    "core-js": "3.1.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-typescript": "^7.3.3",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-typescript": "7.3.3",
     "browserslist-config-nextcloud": "0.0.1",
-    "typescript": "^3.5.2"
+    "typescript": "3.5.2"
   },
   "browserslist": [
     "extends browserslist-config-nextcloud"

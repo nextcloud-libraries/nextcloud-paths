@@ -1,2 +1,3 @@
-# nextcloud-paths
+# @nextcloud/paths
+
 Path helpers for Nextcloud
