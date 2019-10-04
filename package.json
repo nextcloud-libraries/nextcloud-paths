@@ -23,7 +23,7 @@
     "@babel/cli": "7.6.2",
     "@babel/core": "7.6.2",
     "@babel/preset-env": "7.6.2",
-    "@babel/preset-typescript": "7.3.3",
+    "@babel/preset-typescript": "7.6.0",
     "babel-jest": "^24.9.0",
     "browserslist-config-nextcloud": "0.0.1",
     "jest": "^24.9.0",
