@@ -15,6 +15,11 @@
   "keywords": [
     "nextcloud"
   ],
+  "homepage": "https://github.com/nextcloud/nextcloud-paths#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextcloud/nextcloud-paths"
+  },
   "author": "Christoph Wurst",
   "license": "GPL-3.0-or-later",
   "dependencies": {
