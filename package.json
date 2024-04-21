@@ -13,7 +13,8 @@
     "test:watch": "jest --watchAll"
   },
   "keywords": [
-    "nextcloud"
+    "nextcloud",
+    "paths"
   ],
   "homepage": "https://github.com/nextcloud-libraries/nextcloud-paths#readme",
   "repository": {
@@ -42,5 +43,11 @@
   "engines": {
     "node": "^20.0.0",
     "npm": "^9.0.0 || ^10.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ]
 }

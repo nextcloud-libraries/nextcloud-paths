@@ -1,8 +1,7 @@
 # @nextcloud/paths
 
-[![Build Status](https://travis-ci.com/nextcloud/nextcloud-paths.svg?branch=master)](https://travis-ci.com/nextcloud/nextcloud-paths)
 [![npm](https://img.shields.io/npm/v/@nextcloud/paths.svg)](https://www.npmjs.com/package/@nextcloud/paths)
-[![Documentation](https://img.shields.io/badge/Documentation-online-brightgreen)](https://nextcloud.github.io/nextcloud-paths/)
+[![Documentation](https://img.shields.io/badge/Documentation-online-brightgreen)](https://nextcloud-libraries.github.io/nextcloud-paths/)
 
 Path helpers for Nextcloud apps.
 
@@ -29,7 +28,7 @@ encodePath('/my/other file.txt')
 isSamePath('/my/file.txt', 'my/file.txt')
 // -> true
 
-basename('/my/file.txt')
-// -> 'file.txt'
+joinPaths('/my', 'folder', 'file.txt')
+// -> '/my/folder/file.txt'
 ```
 
