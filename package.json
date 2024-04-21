@@ -1,12 +1,12 @@
 {
   "name": "@nextcloud/paths",
   "version": "2.1.0",
-  "description": "",
+  "description": "Helper functions for working with paths in Nextcloud apps",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "babel ./lib --out-dir dist --extensions '.ts,.tsx' --source-maps && tsc --emitDeclarationOnly",
-    "build:doc": "typedoc --mode file --out dist/doc lib/index.ts && touch dist/doc/.nojekyll",
+    "build:doc": "typedoc --out dist/doc lib/index.ts && touch dist/doc/.nojekyll",
     "check-types": "tsc",
     "dev": "babel ./lib --out-dir dist --extensions '.ts,.tsx' --watch",
     "test": "jest",
@@ -15,10 +15,10 @@
   "keywords": [
     "nextcloud"
   ],
-  "homepage": "https://github.com/nextcloud/nextcloud-paths#readme",
+  "homepage": "https://github.com/nextcloud-libraries/nextcloud-paths#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nextcloud/nextcloud-paths"
+    "url": "https://github.com/nextcloud-libraries/nextcloud-paths"
   },
   "author": "Christoph Wurst",
   "license": "GPL-3.0-or-later",
