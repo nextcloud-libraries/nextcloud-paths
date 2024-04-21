@@ -15,8 +15,9 @@
     "build": "vite --mode production build",
     "build:doc": "typedoc --out dist/doc lib/index.ts && touch dist/doc/.nojekyll",
     "dev": "vite --mode development build --watch",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch"
   },
   "keywords": [
     "nextcloud"
@@ -35,6 +36,7 @@
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
+    "vitest": "^1.5.0"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"
