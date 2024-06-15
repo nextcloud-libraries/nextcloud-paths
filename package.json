@@ -32,7 +32,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@nextcloud/browserslist-config": "^3.0.1",
-    "@nextcloud/vite-config": "^1.2.3",
+    "@nextcloud/vite-config": "^2.0.2",
     "@vitest/coverage-v8": "^1.6.0",
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
