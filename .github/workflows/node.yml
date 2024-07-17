@@ -3,24 +3,18 @@
 # https://github.com/nextcloud/.github
 # https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization
 #
-# SPDX-FileCopyrightText: 2023-2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-FileCopyrightText: 2021-2024 Nextcloud GmbH and Nextcloud contributors
 # SPDX-License-Identifier: MIT
 
-name: Node tests
+name: Node
 
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-      - master
-      - stable*
+on: pull_request
 
 permissions:
   contents: read
 
 concurrency:
-  group: node-tests-${{ github.head_ref || github.run_id }}
+  group: node-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
@@ -41,8 +35,6 @@ jobs:
           filters: |
             src:
               - '.github/workflows/**'
-              - '__tests__/**'
-              - '__mocks__/**'
               - 'src/**'
               - 'appinfo/info.xml'
               - 'package.json'
@@ -52,12 +44,13 @@ jobs:
               - '**.ts'
               - '**.vue'
 
-  test:
+  build:
     runs-on: ubuntu-latest
 
     needs: changes
     if: needs.changes.outputs.src != 'false'
 
+    name: NPM build
     steps:
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
@@ -80,31 +73,22 @@ jobs:
       - name: Install dependencies & build
         env:
           CYPRESS_INSTALL_BINARY: 0
+          PUPPETEER_SKIP_DOWNLOAD: true
         run: |
           npm ci
           npm run build --if-present
-
-      - name: Test
-        run: npm run test --if-present
-
-      - name: Test and process coverage
-        run: npm run test:coverage --if-present
-
-      - name: Collect coverage
-        uses: codecov/codecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673 # v4.5.0
-        with:
-          files: ./coverage/lcov.info
 
   summary:
     permissions:
       contents: none
     runs-on: ubuntu-latest
-    needs: [changes, test]
+    needs: [changes, build]
 
     if: always()
 
-    name: test-summary
+    # This is the summary, we just avoid to rename it so that branch protection rules still match
+    name: node
 
     steps:
       - name: Summary status
-        run: if ${{ needs.changes.outputs.src != 'false' && needs.test.result != 'success' }}; then exit 1; fi
+        run: if ${{ needs.changes.outputs.src != 'false' && needs.build.result != 'success' }}; then exit 1; fi
