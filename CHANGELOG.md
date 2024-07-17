@@ -6,6 +6,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.2.0 - 2024-07-17
+### Fixed
+- fix: Adjust package.json to make `build:doc` work again and fix incorrect URL
+- fix: Add example of `joinPaths` to README, remove non existing travis
+
+### Changed
+- Dependency updates
+- Update npm and node engines versions to current LTS
+- chore: Migrate to use Vite - drop Babel and Jest
+- ci: Update workflows from organization
+
 ## 2.1.0 – 2021-09-28
 ### Changed
 - Dependency updates
