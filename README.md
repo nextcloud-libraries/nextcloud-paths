@@ -4,6 +4,7 @@
 -->
 # @nextcloud/paths
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud-libraries/nextcloud-paths)](https://api.reuse.software/info/github.com/nextcloud-libraries/nextcloud-paths)
 [![npm](https://img.shields.io/npm/v/@nextcloud/paths.svg)](https://www.npmjs.com/package/@nextcloud/paths)
 [![Documentation](https://img.shields.io/badge/Documentation-online-brightgreen)](https://nextcloud-libraries.github.io/nextcloud-paths/)
 
