@@ -1,14 +1,17 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "declaration": true,
-        "outDir": "./dist",
-        "strict": true,
-        "lib": [
-            "es6",
-            "dom"
-        ]
-    }
+	"include": ["lib"],
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"declaration": true,
+		"outDir": "./dist",
+		"rootDir": "lib",
+		"strict": true,
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"types": ["vitest"]
+	}
 }
