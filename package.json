@@ -28,7 +28,7 @@
     "type": "git",
     "url": "https://github.com/nextcloud-libraries/nextcloud-paths"
   },
-  "author": "Christoph Wurst",
+  "author": "Nextcloud GmbH and Nextcloud contributors",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@nextcloud/browserslist-config": "^3.0.1",
@@ -44,10 +44,11 @@
   ],
   "engines": {
     "node": "^20.0.0",
-    "npm": "^9.0.0 || ^10.0.0"
+    "npm": "^10.0.0"
   },
   "files": [
     "dist",
+    "AUTHORS.md",
     "CHANGELOG.md",
     "README.md",
     "LICENSE"
