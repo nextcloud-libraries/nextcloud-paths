@@ -36,7 +36,7 @@
     "@vitest/coverage-v8": "^2.1.8",
     "typedoc": "^0.27.4",
     "typescript": "^5.7.2",
-    "vite": "^5.4.11",
+    "vite": "^6.0.3",
     "vitest": "^2.0.2"
   },
   "browserslist": [
