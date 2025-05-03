@@ -37,7 +37,7 @@
     "typedoc": "^0.28.3",
     "typescript": "^5.8.3",
     "vite": "^5.4.14",
-    "vitest": "^2.0.2"
+    "vitest": "^3.1.2"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"
