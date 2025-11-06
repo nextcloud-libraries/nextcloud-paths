@@ -12,6 +12,5 @@
 			"es6",
 			"dom"
 		],
-		"types": ["vitest"]
 	}
 }

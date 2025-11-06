@@ -2,6 +2,7 @@
 	"extends": "..",
 	"include": ["../*.ts", ".", "../lib"],
 	"compilerOptions": {
-		"rootDir": ".."
+		"rootDir": "..",
+		"types": ["vitest"]
 	}
 }

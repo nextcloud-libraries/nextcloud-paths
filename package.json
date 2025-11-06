@@ -2,23 +2,6 @@
   "name": "@nextcloud/paths",
   "version": "2.2.1",
   "description": "Helper functions for working with paths in Nextcloud apps",
-  "type": "module",
-  "main": "dist/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "scripts": {
-    "build": "vite --mode production build",
-    "build:doc": "typedoc --out dist/doc lib/index.ts && touch dist/doc/.nojekyll",
-    "dev": "vite --mode development build --watch",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest watch"
-  },
   "keywords": [
     "nextcloud",
     "paths"
@@ -28,8 +11,35 @@
     "type": "git",
     "url": "https://github.com/nextcloud-libraries/nextcloud-paths"
   },
-  "author": "Nextcloud GmbH and Nextcloud contributors",
   "license": "GPL-3.0-or-later",
+  "author": "Nextcloud GmbH and Nextcloud contributors",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "AUTHORS.md",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite --mode production build",
+    "build:doc": "typedoc --out dist/doc lib/index.ts && touch dist/doc/.nojekyll",
+    "dev": "vite --mode development build --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch"
+  },
+  "browserslist": [
+    "extends @nextcloud/browserslist-config"
+  ],
   "devDependencies": {
     "@nextcloud/browserslist-config": "^3.0.1",
     "@nextcloud/vite-config": "^2.3.5",
@@ -39,18 +49,8 @@
     "vite": "^5.4.21",
     "vitest": "^3.2.4"
   },
-  "browserslist": [
-    "extends @nextcloud/browserslist-config"
-  ],
   "engines": {
     "node": "^20.0.0",
     "npm": "^10.0.0"
-  },
-  "files": [
-    "dist",
-    "AUTHORS.md",
-    "CHANGELOG.md",
-    "README.md",
-    "LICENSE"
-  ]
+  }
 }
