@@ -6,6 +6,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.2.2 - 2025-11-07
+### Changed
+* Dependency updates
+* chore: update Node and NPM versions.
+  This package now supports to be used with Node 22 and Node 24.
+* ci: update workflows from organization
+
 ## 2.2.1 - 2024-07-25
 ### Fixed
 - fix: Correctly setup Typescript root to emit declarations
