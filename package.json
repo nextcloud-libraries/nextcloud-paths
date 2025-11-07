@@ -1,6 +1,6 @@
 {
   "name": "@nextcloud/paths",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Helper functions for working with paths in Nextcloud apps",
   "keywords": [
     "nextcloud",
