@@ -38,9 +38,21 @@ export function dirname(path: string): string {
 }
 
 /**
- * Join path sections
+ * Joins multiple path segments into a single path.
+ *
+ * @param args - The path segments to join
+ * @deprecated use `join()` instead
  */
-export function joinPaths(...args: string[]) {
+export function joinPaths(...args: string[]): string {
+    return join(...args)
+}
+
+/**
+ * Joins multiple path segments into a single path.
+ *
+ * @param args - The path segments to join
+ */
+export function join(...args: string[]): string {
     if (arguments.length < 1) {
         return ''
     }

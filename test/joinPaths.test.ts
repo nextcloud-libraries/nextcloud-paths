@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { describe, expect, it  } from 'vitest';
-import { joinPaths } from "../lib/index";
+import { joinPaths, join } from "../lib/index";
 
-describe("joinPaths", function () {
+describe.for([join, joinPaths])("joinPaths", (joinPaths) => {
 	it("returns empty string with no or empty arguments", function () {
 		expect(joinPaths()).toEqual("");
 		expect(joinPaths("")).toEqual("");
