@@ -41,7 +41,7 @@
     "extends @nextcloud/browserslist-config"
   ],
   "devDependencies": {
-    "@nextcloud/browserslist-config": "^3.1.1",
+    "@nextcloud/browserslist-config": "^3.1.2",
     "@nextcloud/vite-config": "^2.5.2",
     "@vitest/coverage-v8": "^4.0.7",
     "typedoc": "^0.28.14",
