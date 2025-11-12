@@ -38,6 +38,20 @@ export function dirname(path: string): string {
 }
 
 /**
+ * Get the file extension of the given path
+ *
+ * @param path - The path to get the extension of
+ */
+export function extname(path: string): string {
+    const base = basename(path)
+    const index = base.lastIndexOf('.')
+    if (index > 0) {
+        return base.substring(index)
+    }
+    return ''
+}
+
+/**
  * Joins multiple path segments into a single path.
  *
  * @param args - The path segments to join
