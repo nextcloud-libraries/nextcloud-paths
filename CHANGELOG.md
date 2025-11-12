@@ -6,6 +6,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.3.0 - 2025-11-07
+### Added
+* feat: add `join` method that deprecates `joinPaths`
+
 ## 2.2.2 - 2025-11-07
 ### Changed
 * Dependency updates
