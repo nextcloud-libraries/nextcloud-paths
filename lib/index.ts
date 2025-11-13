@@ -35,12 +35,12 @@ export function basename(path: string): string {
  * Returns the dir name of the given path.
  * For example for "/abc/somefile.txt" it will return "/abc"
  *
- * @param path
+ * @param path - The path to get the directory of
  */
 export function dirname(path: string): string {
 	return path
 		.replace(/\\/g, '/')
-		.replace(/\/[^\/]*$/, '')
+		.replace(/\/[^/]*$/, '')
 }
 
 /**
