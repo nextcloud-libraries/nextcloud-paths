@@ -114,14 +114,14 @@ export function join(...args: string[]): string {
  * leading, trailing or doubled slashes and also removing
  * the dot sections.
  *
- * @param path1
- * @param path2
+ * @param path1 - First path to check
+ * @param path2 - Second path to check
  */
 export function isSamePath(path1: string, path2: string): boolean {
 	const pathSections1 = (path1 || '').split('/').filter((p) => p !== '.')
 	const pathSections2 = (path2 || '').split('/').filter((p) => p !== '.')
-	path1 = joinPaths.apply(undefined, pathSections1)
-	path2 = joinPaths.apply(undefined, pathSections2)
+	path1 = join(...pathSections1)
+	path2 = join(...pathSections2)
 
 	return path1 === path2
 }
