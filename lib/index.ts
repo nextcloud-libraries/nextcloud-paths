@@ -6,7 +6,7 @@
 /**
  * URI-Encodes a file path but keep the path slashes.
  *
- * @param path
+ * @param path - The path to encode
  */
 export function encodePath(path: string): string {
 	if (!path) {
@@ -23,7 +23,7 @@ export function encodePath(path: string): string {
  * Returns the base name of the given path.
  * For example for "/abc/somefile.txt" it will return "somefile.txt"
  *
- * @param path
+ * @param path - The path to get the basename of
  */
 export function basename(path: string): string {
 	return path
