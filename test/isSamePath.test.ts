@@ -2,8 +2,9 @@
  * SPDX-FileCopyrightText: 2019 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+
 import { describe, expect, it } from 'vitest'
-import { isSamePath } from '../lib/index'
+import { isSamePath } from '../lib/index.ts'
 
 describe('isSamePath', function() {
 	it('recognizes empty paths are equal', function() {

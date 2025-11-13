@@ -4,7 +4,7 @@
  */
 
 import { describe, expect, it } from 'vitest'
-import { join, joinPaths } from '../lib/index'
+import { join, joinPaths } from '../lib/index.ts'
 
 describe.for([join, joinPaths])('joinPaths', (joinPaths) => {
 	it('returns empty string with no or empty arguments', function() {

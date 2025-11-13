@@ -4,7 +4,7 @@
  */
 
 import { expect, test } from 'vitest'
-import { extname } from '../lib/index'
+import { extname } from '../lib/index.ts'
 
 test.each`
 input                | expected

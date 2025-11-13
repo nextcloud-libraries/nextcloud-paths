@@ -2,8 +2,9 @@
  * SPDX-FileCopyrightText: 2019 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+
 import { describe, expect, it } from 'vitest'
-import { dirname } from '../lib/index'
+import { dirname } from '../lib/index.ts'
 
 describe('dirname', function() {
 	it('Returns the nothing if no file name given', function() {
