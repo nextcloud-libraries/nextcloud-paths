@@ -8,6 +8,9 @@
 		"outDir": "./dist",
 		"rootDir": "lib",
 		"strict": true,
+		"allowImportingTsExtensions": true,
+		"erasableSyntaxOnly": true,
+		"rewriteRelativeImportExtensions": true,
 		"lib": [
 			"es6",
 			"dom"

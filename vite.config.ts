@@ -10,5 +10,5 @@ export default createLibConfig(
 	},
 	{
 		libraryFormats: ['cjs', 'es'],
-	}
+	},
 )

@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { expect, test } from "vitest"
-import { extname } from "../lib/index"
+import { expect, test } from 'vitest'
+import { extname } from '../lib/index.ts'
 
 test.each`
 input                | expected
@@ -15,5 +15,5 @@ ${'index'}           | ${''}
 ${'.index'}          | ${''}
 ${'.index.md'}       | ${'.md'}
 `('extname($input) -> $expected', ({ input, expected }) => {
-  expect(extname(input)).toBe(expected)
+	expect(extname(input)).toBe(expected)
 })
