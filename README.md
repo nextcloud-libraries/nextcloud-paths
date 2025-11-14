@@ -19,7 +19,7 @@ npm i -S @nextcloud/paths
 ## Usage
 
 ```js
-import { basename, dirname, encodePath, isSamePath, joinPaths } from '@nextcloud/paths'
+import { basename, dirname, extname, encodePath, isSamePath, join } from '@nextcloud/paths'
 
 basename('/my/file.txt')
 // -> 'file.txt'
@@ -27,13 +27,16 @@ basename('/my/file.txt')
 dirname('/my/file.txt')
 // -> '/my'
 
+extname('/my/file.txt')
+// -> '.txt'
+
 encodePath('/my/other file.txt')
 // -> '/my/other%20file'
 
 isSamePath('/my/file.txt', 'my/file.txt')
 // -> true
 
-joinPaths('/my', 'folder', 'file.txt')
+join('/my', 'folder', 'file.txt')
 // -> '/my/folder/file.txt'
 ```
 
