@@ -37,15 +37,10 @@ describe('basename', function() {
 	it('Returns dot if file name is dot', function() {
 		expect(basename('/subdir/.')).toEqual('.')
 	})
-	// TODO: fix the source to make it work like PHP's basename
 	it('Returns the dir itself if no file name given', function() {
-		// TODO: fix the source to make it work like PHP's dirname
-		// expect(basename('subdir/')).toEqual('subdir');
-		expect(basename('subdir/')).toEqual('')
+		expect(basename('subdir/')).toEqual('subdir')
 	})
 	it('Returns the dir itself if no file name given with root', function() {
-		// TODO: fix the source to make it work like PHP's dirname
-		// expect(basename('/subdir/')).toEqual('subdir');
-		expect(basename('/subdir/')).toEqual('')
+		expect(basename('/subdir/')).toEqual('subdir')
 	})
 })
