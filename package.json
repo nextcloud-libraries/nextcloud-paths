@@ -47,7 +47,7 @@
     "@nextcloud/eslint-config": "^9.0.0-rc.6",
     "@nextcloud/vite-config": "^2.5.2",
     "@vitest/coverage-v8": "^4.0.15",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "typedoc": "^0.28.15",
     "typescript": "^5.9.3",
     "vite": "^7.2.7",
