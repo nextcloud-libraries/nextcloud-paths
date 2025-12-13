@@ -24,11 +24,16 @@ export function encodePath(path: string): string {
  * For example for "/abc/somefile.txt" it will return "somefile.txt"
  *
  * @param path - The path to get the basename of
+ * @param extname - An optional extension to remove from the basename
  */
-export function basename(path: string): string {
-	return path
+export function basename(path: string, extname?: string): string {
+	path = path
 		.replace(/\\/g, '/')
 		.replace(/.*\//, '')
+	if (extname && extname !== path && path.endsWith(extname)) {
+		return path.substring(0, path.length - extname.length)
+	}
+	return path
 }
 
 /**
