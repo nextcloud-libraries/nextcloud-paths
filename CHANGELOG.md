@@ -6,7 +6,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## 2.3.0 - 2025-11-07
+## 2.4.0 - 2025-11-14
+### Added
+* feat: add `extname` method
+### Changed
+* chore: add ESlint so we can enforce consistent code style
+
+## 2.3.0 - 2025-11-12
 ### Added
 * feat: add `join` method that deprecates `joinPaths`
 
