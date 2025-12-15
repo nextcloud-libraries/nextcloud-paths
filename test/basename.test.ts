@@ -48,4 +48,24 @@ describe('basename', function() {
 		// expect(basename('/subdir/')).toEqual('subdir');
 		expect(basename('/subdir/')).toEqual('')
 	})
+
+	it('removes the extension if given', function() {
+		expect(basename('/some/.txt/some name.txt', '.txt')).toEqual('some name')
+	})
+
+	it('removes the extension even if not contains a dot', function() {
+		expect(basename('some name.txt', 't')).toEqual('some name.tx')
+	})
+
+	it('removes nearly full name if covered by extension', function() {
+		expect(basename('.name.txt', 'name.txt')).toEqual('.')
+	})
+
+	it('does not remove the extension if removing name', function() {
+		expect(basename('name.txt', 'name.txt')).toEqual('name.txt')
+	})
+
+	it('does not remove the extension not found', function() {
+		expect(basename('name.txt', 'name')).toEqual('name.txt')
+	})
 })
