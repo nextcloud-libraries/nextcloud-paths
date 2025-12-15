@@ -66,16 +66,6 @@ export function extname(path: string): string {
  * Joins multiple path segments into a single path.
  *
  * @param args - The path segments to join
- * @deprecated use `join()` instead
- */
-export function joinPaths(...args: string[]): string {
-	return join(...args)
-}
-
-/**
- * Joins multiple path segments into a single path.
- *
- * @param args - The path segments to join
  */
 export function join(...args: string[]): string {
 	if (arguments.length < 1) {
