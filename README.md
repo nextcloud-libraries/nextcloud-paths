@@ -24,6 +24,9 @@ import { basename, dirname, extname, encodePath, isSamePath, join } from '@nextc
 basename('/my/file.txt')
 // -> 'file.txt'
 
+basename('/my/file.txt', '.txt')
+// -> 'file'
+
 dirname('/my/file.txt')
 // -> '/my'
 
