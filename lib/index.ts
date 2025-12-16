@@ -29,6 +29,7 @@ export function encodePath(path: string): string {
 export function basename(path: string, extname?: string): string {
 	path = path
 		.replace(/\\/g, '/')
+		.replace(/\/+$/g, '')
 		.replace(/.*\//, '')
 	if (extname && extname !== path && path.endsWith(extname)) {
 		return path.substring(0, path.length - extname.length)
@@ -43,9 +44,19 @@ export function basename(path: string, extname?: string): string {
  * @param path - The path to get the directory of
  */
 export function dirname(path: string): string {
-	return path
-		.replace(/\\/g, '/')
-		.replace(/\/[^/]*$/, '')
+	path = path.replaceAll(/\\/g, '/')
+	const sections = path.split('/')
+	if (sections.length <= 1) {
+		// there was no slash in the path
+		return '.'
+	}
+
+	sections.pop()
+	if (sections.length === 1 && sections[0] === '') {
+		return '/'
+	}
+
+	return sections.join('/')
 }
 
 /**
