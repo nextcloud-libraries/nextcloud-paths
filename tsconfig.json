@@ -12,8 +12,8 @@
 		"erasableSyntaxOnly": true,
 		"rewriteRelativeImportExtensions": true,
 		"lib": [
-			"es6",
-			"dom"
+			"ESNext",
+			"DOM"
 		],
 	}
 }
