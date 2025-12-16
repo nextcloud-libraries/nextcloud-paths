@@ -6,6 +6,51 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2025-12-16
+### Breaking changes
+- This package now does only provide an ES module, the CJS entry point is removed.
+- The behavior of `basename` and `dirname` was fixed to behave similar
+  to the methods from the Node.js `paths` module and the PHP methods.
+  This mainly affects special cases:
+  - trailing slash on `basename` is ignored
+  ```diff
+  basename('subdir/')
+  - ""
+  + "subdir"
+  ```
+  - `dirname` always respects the root path:
+  ```diff
+  dirname('/')
+  - ""
+  + "/"
+  ```
+  ```diff
+  dirname('')
+  - ""
+  + "."
+  ```
+  ```diff
+  dirname('/file')
+  - ""
+  + "/"
+  ```
+  ```diff
+  dirname('file')
+  - ""
+  + "."
+  ```
+
+### Added
+* feat(basename): add support for removing an extension \([#843](https://github.com/nextcloud-libraries/nextcloud-paths/pull/843)\)
+
+### Fixed
+* fix!: make `dirname` and `basename` behave like PHP and Node \([#839](https://github.com/nextcloud-libraries/nextcloud-paths/pull/839)\)
+
+### Changed
+* chore!: drop commonJs entry points
+* chore!: remove deprecated `joinPaths` in favor of `join`
+* test: add unit tests for `encodePath`
+
 ## 2.4.0 - 2025-11-14
 ### Added
 * feat: add `extname` method
