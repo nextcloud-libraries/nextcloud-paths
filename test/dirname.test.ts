@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 import { dirname } from '../lib/index.ts'
 
 describe('dirname', function() {
-	it('Returns the nothing if no file name given', function() {
+	it('Returns current folder if no file name given', function() {
 		expect(dirname('')).toEqual('.')
 	})
 	it('Returns the root if dir is root', function() {
