@@ -6,6 +6,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2026-02-18
+### Added
+- feat(normalize): add `normalize` method compatible with the version from `node:path` [\#861](https://github.com/nextcloud-libraries/nextcloud-paths/pull/861)
+
+### Changed
+- Updated development dependencies
+
 ## 3.0.0 - 2025-12-16
 ### Breaking changes
 - This package now does only provide an ES module, the CJS entry point is removed.
