@@ -131,3 +131,36 @@ export function isSamePath(path1: string, path2: string): boolean {
 
 	return path1 === path2
 }
+
+/**
+ * Normalizes the given path by removing leading, trailing and doubled slashes and also removing the dot sections.
+ *
+ * @param path - The path to normalize
+ */
+export function normalize(path: string): string {
+	const sections = path.split('/')
+		.filter((p, index, arr) => p !== '' || index === 0 || index === (arr.length - 1)) // remove double // but keep leading and trailing slash
+		.filter((p) => p !== '.') // remove useless /./ sections
+
+	const sanitizedSections: string[] = []
+	for (const section of sections) {
+		const lastSection = sanitizedSections.at(-1)
+		if (section === '..' && lastSection !== '..') {
+			// if the current section is ".." for the parent, we remove the last section
+			// But only if the last section is not also ".." which means that we are in a relative path outside of the root
+			// Note that absolute paths like "/../../foo" are valid as they resolve to "/foo"
+			if (lastSection === undefined) {
+				// if there is no last section, we are at the root and we can't go up further
+				// so we keep the ".." section as this is a relative path outside of the root
+				sanitizedSections.push(section)
+			} else if (lastSection !== '') {
+				// only remove parent if its not the root (leading slash)
+				sanitizedSections.pop()
+			}
+		} else {
+			sanitizedSections.push(section)
+		}
+	}
+
+	return sanitizedSections.join('/')
+}
